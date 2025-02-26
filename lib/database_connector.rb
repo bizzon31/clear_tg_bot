@@ -1,3 +1,4 @@
+# 25.02.25. Подключение к БД и Логам
 require 'active_record'
 require 'logger'
 require 'yaml'

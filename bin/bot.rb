@@ -1,11 +1,14 @@
 #!/usr/bin/env ruby
 
+# Перед подключение создать БД rake db:create и
+# провести меграцию
 require 'telegram/bot'
-require './lib/app_configurator'
+require './lib/app_cofigurator.rb'
+require './lib/message_responder'
 
 Dotenv.load 
 
-# Конфигурация
+# Конфигурация БД и Логов
 config = AppConfigurator.new
 config.configure
 
@@ -19,6 +22,8 @@ Telegram::Bot::Client.run(token) do |bot|
     options = {bot: bot, message: message}
 
     logger.debug "@#{message.from.username}: #{message.text}" 
-    # MessageResponder.new(options).respond
+    
+    # Оброботка сообщений 
+    MessageResponder.new(options)
   end
 end
