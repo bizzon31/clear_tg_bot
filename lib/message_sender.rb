@@ -20,6 +20,7 @@ class MessageSender
     if reply_markup
       bot.api.send_message(chat_id: chat.id, text: text, reply_markup: reply_markup)
     else
+      # Ответ текстом в сообщении
       bot.api.send_message(chat_id: chat.id, text: text)
     end
 

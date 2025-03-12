@@ -4,7 +4,9 @@
 # require 'sqlite3'
 require './models/user.rb'
 require './lib/message_sender'
+require './lib/bot_com_handler'
 
+# ! Тестовый класс
 class Car < ActiveRecord::Base; end
 
 class MessageResponder
@@ -35,6 +37,7 @@ class MessageResponder
       # Обработка задания боту
       logger.debug "test: #{message.text}"
       # post_cars
+      BotComHandler.new(message.text)
     end
   end
   

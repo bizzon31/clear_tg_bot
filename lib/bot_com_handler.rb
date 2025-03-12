@@ -2,7 +2,8 @@
 # Обработчик команд бота /bot
 
 class BotComHandler
-  def initialize(option)
-    
+  def initialize(text)
+    @text = text.split(' ')
+    puts "connect BotComHandler #{@text}"
   end
 end

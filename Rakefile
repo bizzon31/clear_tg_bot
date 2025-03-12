@@ -13,7 +13,7 @@ namespace :db do
   task :migrate do
     connection_details = YAML::load(File.open('config/database.yml'))
     ActiveRecord::Base.establish_connection(connection_details)
-    ActiveRecord::Migration.migrate('db/migrate/')
+    # ActiveRecord::Migration.migrate('db/migrate/')
     CreateUserTable.new.change
   end
 

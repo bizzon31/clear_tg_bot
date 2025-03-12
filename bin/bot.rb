@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+# NOTE: Описание в description/bot.txt
+
 # Перед подключение создать БД rake db:create и
 # провести меграцию
 require 'telegram/bot'
