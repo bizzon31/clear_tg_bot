@@ -39,3 +39,5 @@ gem "md2pdf", "~> 0.0.1"
 gem "kramdown", "~> 2.5"
 
 gem "prawn", "~> 2.5"
+
+gem "axlsx", "~> 2.0"

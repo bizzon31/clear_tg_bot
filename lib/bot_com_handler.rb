@@ -4,6 +4,7 @@
 class BotComHandler
   def initialize(text)
     @text = text.split(' ')
+    # 
     puts "connect BotComHandler #{@text}"
   end
 end
