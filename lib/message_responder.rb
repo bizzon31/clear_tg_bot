@@ -36,8 +36,9 @@ class MessageResponder
     on /^\/bot/ do
       # Обработка задания боту
       logger.debug "test: #{message.text}"
-      # post_cars
-      BotComHandler.new(message.text)
+      # Обрабатывает команду типа /bot отчёт 
+      option = {bot: @bot, message: @message}
+      BotComHandler.new(option)
     end
   end
   
@@ -72,12 +73,12 @@ class MessageResponder
   end
 
   # ## Тест с постом всех данных из db cars
-  def post_cars
-    cars = Car.all
-    cars.each {|car| 
-      answer_with_message ("#{car.name}: #{car.price}")
-    }
-  end
+  # def post_cars
+  #   cars = Car.all
+  #   cars.each {|car| 
+  #     answer_with_message ("#{car.name}: #{car.price}")
+  #   }
+  # end
 
 end
 

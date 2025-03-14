@@ -40,4 +40,7 @@ gem "kramdown", "~> 2.5"
 
 gem "prawn", "~> 2.5"
 
-gem "axlsx", "~> 2.0"
+# gem "axlsx", "~> 2.0"
+
+gem "write_xlsx", "~> 1.12"
+gem "faraday", ">= 0"
